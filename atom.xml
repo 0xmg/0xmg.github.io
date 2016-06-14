@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://0xmg.github.io/"/>
-  <updated>2016-06-14T14:02:37.000Z</updated>
+  <updated>2016-06-14T14:07:17.000Z</updated>
   <id>http://0xmg.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://0xmg.github.io/2016/06/14/WebBackScan/"/>
     <id>http://0xmg.github.io/2016/06/14/WebBackScan/</id>
     <published>2016-06-14T13:47:28.000Z</published>
-    <updated>2016-06-14T14:02:37.000Z</updated>
+    <updated>2016-06-14T14:07:17.000Z</updated>
     
     <content type="html">&lt;p&gt;  以前写的扫描备份的工具都是参考的御剑大神的代码，通过二次访问网站文件来确定是否存在，但是很容易被Waf拦掉，最近在群里发现一个更好的方法，共享给大家。&lt;/p&gt;
 &lt;h2 id=&quot;正文&quot;&gt;&lt;a href=&quot;#正文&quot; class=&quot;headerlink&quot; title=&quot;正文&quot;&gt;&lt;/a&gt;正文&lt;/h2&gt;&lt;p&gt;  好了，废话不多说，先把Code贴一下&lt;/p&gt;
@@ -36,6 +36,10 @@
     
     </summary>
     
+      <category term="备份扫描" scheme="http://0xmg.github.io/categories/%E5%A4%87%E4%BB%BD%E6%89%AB%E6%8F%8F/"/>
+    
+    
+      <category term="备份扫描 c#" scheme="http://0xmg.github.io/tags/%E5%A4%87%E4%BB%BD%E6%89%AB%E6%8F%8F-c/"/>
     
   </entry>
   

